@@ -267,7 +267,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(44,44,44,0.6) 0%, rgba(44,44,44,0.85) 100%);
+      background: linear-gradient(to bottom, rgba(44,44,44,0.35) 0%, rgba(44,44,44,0.7) 100%);
     }
     /* Activate when img is present */
     .hero-media:has(img) { display: block; }
@@ -438,6 +438,15 @@
     .hl {
       background-image: linear-gradient(transparent 55%, rgba(232,133,58,0.25) 55%);
       font-weight: 600;
+    }
+
+    a.hl {
+      color: var(--basalt);
+      text-decoration: none;
+    }
+
+    a.hl:hover {
+      color: var(--gotjawal);
     }
 
     /* ══════════════════════════════════════
@@ -911,7 +920,7 @@
           <svg class="icon" viewBox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.013 3a1.784 1.784 0 0 1 1.575.887l4.76 8.25"/><path d="m9.344 5.811-4.093 2.36"/></svg>
           <h3>쓰레기 배출</h3>
         </div>
-        <p>쓰레기 배출 및 분리수거는 <span class="hl">'선흘1리 재활용 도움센터(선흘리2541-1)'</span>에 직접 가져가시면 상주하시는 분이 친절하게 도와주십니다.</p>
+        <p>쓰레기 배출 및 분리수거는 <a href="https://map.kakao.com/?q=%EC%84%A0%ED%9D%981%EB%A6%AC+%EC%9E%AC%ED%99%9C%EC%9A%A9%EB%8F%84%EC%9B%80%EC%84%BC%ED%84%B0" target="_blank" rel="noopener" class="hl">'선흘1리 재활용 도움센터(선흘리2541-1)'</a>에 직접 가져가시면 상주하시는 분이 친절하게 도와주십니다.</p>
       </div>
     </div>
   </div>

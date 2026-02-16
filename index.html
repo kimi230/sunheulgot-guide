@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선흘곶 사계 | 입주 안내</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #333;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(15, 146, 125, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 1rem;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    /* ── Sections ── */
+    section {
+      min-height: 100vh;
+      padding: 5rem 1.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0f927d 0%, #0a7566 100%);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+
+    .hero .subtitle {
+      font-size: 1.5rem;
+      font-weight: 300;
+      opacity: 0.9;
+      letter-spacing: 8px;
+    }
+
+    .hero .divider {
+      width: 60px;
+      height: 3px;
+      background: rgba(255,255,255,0.5);
+      margin: 1.5rem auto;
+      border-radius: 2px;
+    }
+
+    .hero .scroll-hint {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ── Section Titles ── */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: -1px;
+    }
+
+    .section-title .accent {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+      opacity: 0.7;
+    }
+
+    /* ── Color Themes ── */
+    .theme-teal {
+      background: linear-gradient(135deg, #0f927d 0%, #0d8572 100%);
+      color: #fff;
+    }
+
+    .theme-darkblue {
+      background: linear-gradient(135deg, #1B5789 0%, #164a75 100%);
+      color: #fff;
+    }
+
+    .theme-lightblue {
+      background: #e8f4f8;
+      color: #1a3a4a;
+    }
+
+    .theme-orange {
+      background: linear-gradient(135deg, #FD9F28 0%, #fd8a69 100%);
+      color: #fff;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(5px);
+    }
+
+    .theme-lightblue .card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* ── Highlight ── */
+    .highlight {
+      background: rgba(255, 237, 18, 0.25);
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .theme-lightblue .highlight {
+      background: rgba(15, 146, 125, 0.1);
+      color: #0f927d;
+    }
+
+    /* ── Address Block ── */
+    .address-block {
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .address-block .addr {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .address-block .transport {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .map-link:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* ── Place List ── */
+    .place-grid {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .place-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .place-item .name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .place-item .time {
+      font-size: 0.8rem;
+      color: #0f927d;
+      font-weight: 600;
+      background: rgba(15,146,125,0.08);
+      padding: 0.2rem 0.6rem;
+      border-radius: 1rem;
+      white-space: nowrap;
+    }
+
+    .place-category {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 1.5rem 0 0.8rem;
+      color: #0f927d;
+    }
+
+    .place-category:first-child {
+      margin-top: 0;
+    }
+
+    /* ── Closing ── */
+    .closing {
+      text-align: center;
+    }
+
+    .closing h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+    }
+
+    .closing p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+
+    /* ── Warning Badge ── */
+    .warning-badge {
+      display: inline-block;
+      background: rgba(255, 237, 18, 0.3);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+    }
+
+    /* ── Responsive ── */
+    @media (min-width: 768px) {
+      section {
+        padding: 6rem 2rem 4rem;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero .subtitle {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .card-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .card-grid-2 .card {
+        margin-bottom: 0;
+      }
+
+      .place-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ── Scroll Animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="#hero">홈</a>
+  <a href="#location">찾아오는 길</a>
+  <a href="#before">입주 전</a>
+  <a href="#after">입주 후</a>
+  <a href="#caution">주의사항</a>
+  <a href="#nearby">주변 안내</a>
+</nav>
+
+<!-- 1. Hero / Cover -->
+<section id="hero" class="hero">
+  <div class="container">
+    <h1>선흘곶 사계</h1>
+    <div class="divider"></div>
+    <p class="subtitle">입주 안내</p>
+    <p class="scroll-hint">아래로 스크롤 ↓</p>
+  </div>
+</section>
+
+<!-- 2. 찾아오는 길 -->
+<section id="location" class="theme-teal">
+  <div class="container">
+    <h2 class="section-title fade-in">
+      <span class="accent">Location</span>
+      찾아오는 길
+    </h2>
+    <div class="address-block fade-in">
+      <p class="addr">제주특별자치도 제주시 조천읍 선흘동1길 58</p>
+      <p class="transport">🚌 버스 704-4 &lsquo;선흘초등학교 앞&rsquo; 정류장</p>
+      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%A1%B0%EC%B2%9C%EC%9D%8D%20%EC%84%A0%ED%9D%98%EB%8F%991%EA%B8%B8%2058" target="_blank" rel="noopener" class="map-link">📍 네이버 지도에서 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 입주 전 안내사항 -->
+<section id="before" class="theme-darkblue">
+  <div class="container">
+    <h2 class="section-title fade-in">
+      <span class="accent">Before Check-in</span>
+      입주 전 안내사항
+    </h2>
+    <div class="card-grid-2">
+      <div class="card fade-in">
+        <div class="card-icon">🔑</div>
+        <h3>비밀번호</h3>
+        <p>입주 비밀번호는 게스트님의 <span class="highlight">전화번호 뒷 네자리</span>입니다.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🕓</div>
+        <h3>체크인 / 체크아웃</h3>
+        <p>체크인은 <span class="highlight">4시 이후</span>, 체크아웃은 <span class="highlight">11시까지</span></p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🔥</div>
+        <h3>난방 및 온수</h3>
+        <p>2층 난방은 전기, 1층 난방과 온수는 LPG 가스를 사용합니다.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">💧</div>
+        <h3>절약 협조</h3>
+        <p>제주의 물 부족과 에너지 비용을 고려하여 절약에 협조 부탁드립니다.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🚫</div>
+        <h3>파티 금지</h3>
+        <p><span class="highlight">10시 이후 파티는 절대 금지</span>입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 입주 후 안내사항 -->
+<section id="after" class="theme-lightblue">
+  <div class="container">
+    <h2 class="section-title fade-in">
+      <span class="accent">After Check-in</span>
+      입주 후 안내사항
+    </h2>
+    <div class="card fade-in">
+      <div class="card-icon">🛏️</div>
+      <h3>이불 안내</h3>
+      <p>이불은 퀸베드와 요청하신 인원수 만큼 요세트를 준비했습니다. 2인은 퀸베드, 3인은 1인 요세트, 4인은 2인 요세트가 추가 제공됩니다. <span class="highlight">방문 손님의 추가 이불은 제공하지 않습니다.</span></p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">📶</div>
+      <h3>와이파이</h3>
+      <p>신발장 위에 위치한 공유기 상단에 프린트된 <span class="highlight">QR코드를 스캔</span>하시거나, 공유기 바닥의 공유기명과 비밀번호를 확인 후 사용 가능합니다. (KT)</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">♻️</div>
+      <h3>쓰레기 배출</h3>
+      <p>쓰레기 배출 및 분리수거는 <span class="highlight">&lsquo;선흘1리 재활용 도움센터(선흘리2541-1)&rsquo;</span>에 직접 가져가시면 상주하시는 분이 친절하게 도와주십니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 & 6. 주의사항 -->
+<section id="caution" class="theme-darkblue">
+  <div class="container">
+    <h2 class="section-title fade-in">
+      <span class="accent">Caution</span>
+      주의사항 및 전하는 말
+    </h2>
+    <div class="card fade-in">
+      <span class="warning-badge">안전</span>
+      <h3>복층 계단 이용</h3>
+      <p>복층형 숙소이므로 계단 이용 시 주의해 주세요.</p>
+    </div>
+    <div class="card fade-in">
+      <span class="warning-badge">안전</span>
+      <h3>2층 해먹</h3>
+      <p>2층 해먹은 <span class="highlight">어린이 사용 금지</span>이며, 성인 1인만 이용 가능합니다.</p>
+    </div>
+    <div class="card fade-in">
+      <span class="warning-badge">책임</span>
+      <h3>안전사고</h3>
+      <p>부주의로 인한 사고에 대해서는 책임지지 않습니다.</p>
+    </div>
+    <div class="card fade-in">
+      <span class="warning-badge">환경</span>
+      <h3>쓰레기 관리</h3>
+      <p>쓰레기는 실내에 보관해 주시고, 외부에 노출하지 말아 주세요.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">🐾</div>
+      <h3>반려동물</h3>
+      <p>반려동물은 꼭 <span class="highlight">마당과 1층에서만</span> 지내게 해주세요. 안전상, 위생상 2층에 올리지 않도록 부탁드립니다.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">📺</div>
+      <h3>TV 없는 공간</h3>
+      <p>저희 집은 TV가 없습니다. 오롯이 제주의 자연과 자기 자신을 느끼는 시간이 되기를 바랍니다.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">🔥</div>
+      <h3>바베큐</h3>
+      <p>바베큐 이용 시 창고에 있는 그릴을 직접 꺼내서 사용하시면 됩니다. (숯과 망은 개인 준비)</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 & 8. 주변 안내 -->
+<section id="nearby" class="theme-lightblue">
+  <div class="container">
+    <h2 class="section-title fade-in">
+      <span class="accent">Nearby</span>
+      주변 안내
+    </h2>
+
+    <p class="place-category fade-in">🛒 마트 · 편의점</p>
+    <div class="place-grid fade-in">
+      <div class="place-item">
+        <span class="name">함덕 농협 하나로마트</span>
+        <span class="time">차 10분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">선흘 CU 편의점</span>
+        <span class="time">차 2분</span>
+      </div>
+    </div>
+
+    <p class="place-category fade-in">🍽️ 식당</p>
+    <div class="place-grid fade-in">
+      <div class="place-item">
+        <span class="name">353 식당</span>
+        <span class="time">차 2분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">제주한면가</span>
+        <span class="time">차 2분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">선흘방주할머니식당</span>
+        <span class="time">차 7분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">선국수</span>
+        <span class="time">차 5분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">곤밥이</span>
+        <span class="time">차 13분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">칠돈가 함덕흑돼지</span>
+        <span class="time">차 10분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">삼구회포장센터</span>
+        <span class="time">차 12분</span>
+      </div>
+    </div>
+
+    <p class="place-category fade-in">☕ 카페 · 베이커리</p>
+    <div class="place-grid fade-in">
+      <div class="place-item">
+        <span class="name">카페선흘</span>
+        <span class="time">차 7분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">오드랑베이커리</span>
+        <span class="time">차 11분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">제주북카페 올드북촌</span>
+        <span class="time">차 7분</span>
+      </div>
+    </div>
+
+    <p class="place-category fade-in">🏔️ 관광 · 여가</p>
+    <div class="place-grid fade-in">
+      <div class="place-item">
+        <span class="name">동백동산 곶자왈</span>
+        <span class="time">바로 앞</span>
+      </div>
+      <div class="place-item">
+        <span class="name">돌하르방미술관</span>
+        <span class="time">차 8분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">크라운컨트리클럽</span>
+        <span class="time">차 8분</span>
+      </div>
+      <div class="place-item">
+        <span class="name">함덕해수욕장</span>
+        <span class="time">차 10분</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Closing -->
+<section class="theme-orange closing">
+  <div class="container">
+    <h2 class="fade-in">선흘곶 사계</h2>
+    <p class="fade-in">에서 편히 묵으시고<br>좋은 추억 많이 만들어 가시길<br>희망합니다 :)</p>
+  </div>
+</section>
+
+<footer>
+  <p>선흘곶 사계 · 제주특별자치도 제주시 조천읍 선흘동1길 58</p>
+</footer>
+
+<script>
+  // Scroll animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const top = section.offsetTop - 100;
+      if (scrollY >= top) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

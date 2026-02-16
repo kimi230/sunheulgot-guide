@@ -4,643 +4,1328 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>선흘곶 사계 | 입주 안내</title>
+  <meta name="description" content="선흘곶 사계 숙소 입주 안내 - 제주 선흘리 곶자왈 앞 자연 속 쉼터">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ══════════════════════════════════════
+       Custom Properties — Jeju Nature Palette
+       ══════════════════════════════════════ */
+    :root {
+      --basalt: #2C2C2C;
+      --basalt-warm: #3D3632;
+      --gotjawal: #4A6741;
+      --gotjawal-deep: #3A5234;
+      --gotjawal-light: #6B8F62;
+      --camellia: #C4524A;
+      --tangerine: #E8853A;
+      --ocean: #5A8FA8;
+      --stone-warm: #F7F3EE;
+      --stone: #EDE8E1;
+      --parchment: #FAF8F5;
+
+      --font-display: 'Gowun Batang', serif;
+      --font-body: 'Noto Sans KR', sans-serif;
+
+      --fs-display: clamp(2.4rem, 2rem + 2.5vw, 4rem);
+      --fs-h1: clamp(1.75rem, 1.5rem + 1.2vw, 2.5rem);
+      --fs-h2: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+      --fs-body: clamp(0.95rem, 0.9rem + 0.15vw, 1.05rem);
+      --fs-small: clamp(0.8rem, 0.75rem + 0.1vw, 0.88rem);
+
+      --container-max: 720px;
+      --section-py: clamp(3.5rem, 3rem + 3vw, 6rem);
+      --section-px: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+
+      --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      --icon-size: 20px;
+      --icon-stroke: 1.8;
+    }
+
+    /* ══════════════════════════════════════
+       Reset & Base
+       ══════════════════════════════════════ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
-      font-size: 16px;
+      scroll-padding-top: 4rem;
     }
 
     body {
-      font-family: 'Noto Sans KR', sans-serif;
-      color: #333;
-      line-height: 1.7;
+      font-family: var(--font-body);
+      font-size: var(--fs-body);
+      color: var(--basalt);
+      line-height: 1.75;
+      background: var(--stone-warm);
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* ── Navigation ── */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(15, 146, 125, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 0.6rem 1rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--ocean); text-decoration: none; }
+    a:hover { color: var(--gotjawal); }
 
-    nav a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.3rem 0.7rem;
-      border-radius: 1rem;
-      transition: all 0.2s;
+    /* ══════════════════════════════════════
+       SVG Icon System
+       ══════════════════════════════════════ */
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      stroke: currentColor;
+      stroke-width: var(--icon-stroke);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
       flex-shrink: 0;
+      display: inline-block;
+      vertical-align: -0.15em;
     }
+    .icon-lg { --icon-size: 24px; }
 
-    nav a:hover, nav a.active {
-      background: rgba(255,255,255,0.2);
-      color: #fff;
-    }
-
-    /* ── Sections ── */
-    section {
-      min-height: 100vh;
-      padding: 5rem 1.5rem 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
+    /* ══════════════════════════════════════
+       Layout
+       ══════════════════════════════════════ */
     .container {
-      max-width: 680px;
+      max-width: var(--container-max);
       margin: 0 auto;
       width: 100%;
     }
 
-    /* ── Hero ── */
+    section {
+      padding: var(--section-py) var(--section-px);
+      position: relative;
+    }
+
+    /* Section top accent borders */
+    .accent-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+    .accent-gotjawal::before { background: var(--gotjawal); }
+    .accent-ocean::before { background: var(--ocean); }
+    .accent-gotjawal-light::before { background: var(--gotjawal-light); }
+    .accent-camellia::before { background: var(--camellia); }
+    .accent-tangerine::before { background: var(--tangerine); }
+
+    /* Section backgrounds */
+    .bg-stone-warm { background: var(--stone-warm); }
+    .bg-parchment { background: var(--parchment); }
+    .bg-stone { background: var(--stone); }
+
+    /* ══════════════════════════════════════
+       Navigation — Mobile Bottom / Desktop Top
+       ══════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      z-index: 100;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* Mobile: bottom bar */
+    .nav {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.4rem 0.25rem calc(0.4rem + env(safe-area-inset-bottom));
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+      padding: 0.35rem 0.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--basalt);
+      opacity: 0.5;
+      font-size: 0.65rem;
+      font-weight: 500;
+      transition: all 0.2s var(--ease-out);
+      position: relative;
+    }
+
+    .nav-link .icon { --icon-size: 18px; }
+
+    .nav-link.active,
+    .nav-link:hover {
+      opacity: 1;
+      color: var(--gotjawal);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gotjawal);
+    }
+
+    /* Desktop: top bar */
+    @media (min-width: 768px) {
+      .nav {
+        top: 0;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        border-top: none;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        justify-content: center;
+        gap: 0.25rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .nav-link {
+        flex-direction: row;
+        gap: 0.4rem;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.82rem;
+        border-radius: 2rem;
+      }
+
+      .nav-link .icon { --icon-size: 16px; }
+
+      .nav-link.active::after {
+        bottom: 2px;
+        width: 16px;
+        height: 2px;
+        border-radius: 1px;
+      }
+
+      html {
+        scroll-padding-top: 4rem;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       Hero
+       ══════════════════════════════════════ */
     .hero {
-      background: linear-gradient(135deg, #0f927d 0%, #0a7566 100%);
-      color: #fff;
+      background: var(--basalt);
+      color: var(--parchment);
       text-align: center;
-      padding: 6rem 1.5rem;
+      padding: clamp(5rem, 4rem + 8vw, 10rem) var(--section-px);
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: -2px;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    /* Subtle radial gradient decoration */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -20%;
+      width: 70%;
+      height: 120%;
+      background: radial-gradient(ellipse, rgba(74,103,65,0.12) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .hero .subtitle {
-      font-size: 1.5rem;
-      font-weight: 300;
-      opacity: 0.9;
-      letter-spacing: 8px;
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -15%;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse, rgba(90,143,168,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .hero .divider {
-      width: 60px;
-      height: 3px;
-      background: rgba(255,255,255,0.5);
-      margin: 1.5rem auto;
-      border-radius: 2px;
-    }
+    .hero .container { position: relative; z-index: 1; }
 
-    .hero .scroll-hint {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      opacity: 0.6;
-      animation: bounce 2s infinite;
+    /* Photo slot — hidden by default, add img inside to activate */
+    .hero-media {
+      display: none;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
     }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
-    /* ── Section Titles ── */
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      letter-spacing: -1px;
+    .hero-media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(44,44,44,0.6) 0%, rgba(44,44,44,0.85) 100%);
     }
+    /* Activate when img is present */
+    .hero-media:has(img) { display: block; }
 
-    .section-title .accent {
-      display: block;
-      font-size: 0.85rem;
+    .hero-label {
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
       font-weight: 400;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 0.3rem;
-      opacity: 0.7;
-    }
-
-    /* ── Color Themes ── */
-    .theme-teal {
-      background: linear-gradient(135deg, #0f927d 0%, #0d8572 100%);
-      color: #fff;
-    }
-
-    .theme-darkblue {
-      background: linear-gradient(135deg, #1B5789 0%, #164a75 100%);
-      color: #fff;
-    }
-
-    .theme-lightblue {
-      background: #e8f4f8;
-      color: #1a3a4a;
-    }
-
-    .theme-orange {
-      background: linear-gradient(135deg, #FD9F28 0%, #fd8a69 100%);
-      color: #fff;
-    }
-
-    /* ── Cards ── */
-    .card {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 12px;
-      padding: 1.5rem;
+      letter-spacing: 0.2em;
+      opacity: 0.6;
       margin-bottom: 1rem;
-      backdrop-filter: blur(5px);
     }
 
-    .theme-lightblue .card {
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-display);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gotjawal-light);
+      margin: 1.5rem auto;
+      border-radius: 1px;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+      font-weight: 400;
+      opacity: 0.8;
+      letter-spacing: 0.15em;
+    }
+
+    .hero-scroll {
+      margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
+      opacity: 0.4;
+      animation: hero-float 3s ease-in-out infinite;
+    }
+
+    .hero-scroll .icon { --icon-size: 28px; stroke-width: 1.5; }
+
+    @keyframes hero-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* ══════════════════════════════════════
+       Section Header Pattern
+       ══════════════════════════════════════ */
+    .section-header {
+      margin-bottom: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gotjawal-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-h1);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: var(--basalt);
+    }
+
+    .section-line {
+      width: 32px;
+      height: 2px;
+      margin-top: 0.75rem;
+      border-radius: 1px;
+    }
+
+    /* Dotted pattern divider between sections */
+    .section-divider {
+      border: none;
+      border-top: 2px dotted rgba(0,0,0,0.08);
+      margin: 0;
+    }
+
+    /* ══════════════════════════════════════
+       Cards
+       ══════════════════════════════════════ */
+    .card {
       background: #fff;
       border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      border-radius: 10px;
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-left-color 0.25s;
+      border-left: 3px solid transparent;
     }
 
-    .card-icon {
-      font-size: 1.5rem;
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      border-left-color: var(--gotjawal-light);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       margin-bottom: 0.5rem;
     }
 
-    .card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+    .card-header .icon {
+      color: var(--gotjawal);
+      --icon-size: 20px;
+    }
+
+    .card-header h3 {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
     .card p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      opacity: 0.9;
+      font-size: var(--fs-body);
+      line-height: 1.7;
+      color: rgba(44,44,44,0.85);
     }
 
-    /* ── Highlight ── */
-    .highlight {
-      background: rgba(255, 237, 18, 0.25);
-      padding: 0.15rem 0.4rem;
-      border-radius: 3px;
+    /* Warning card variant */
+    .card-warning {
+      border-left-color: var(--camellia);
+    }
+    .card-warning:hover { border-left-color: var(--camellia); }
+    .card-warning .card-header .icon { color: var(--camellia); }
+
+    /* Story card variant — gotjawal accent */
+    .card-story {
+      border-left-color: var(--gotjawal-light);
+    }
+    .card-story:hover { border-left-color: var(--gotjawal); }
+    .card-story .card-header .icon { color: var(--gotjawal); }
+
+    /* Card grid for 2-column layout */
+    .card-grid {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .card-grid .card { margin-bottom: 0; }
+
+    @media (min-width: 768px) {
+      .card-grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       Highlight — Tangerine underline
+       ══════════════════════════════════════ */
+    .hl {
+      background-image: linear-gradient(transparent 55%, rgba(232,133,58,0.25) 55%);
       font-weight: 600;
     }
 
-    .theme-lightblue .highlight {
-      background: rgba(15, 146, 125, 0.1);
-      color: #0f927d;
+    /* ══════════════════════════════════════
+       Badge System
+       ══════════════════════════════════════ */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.4rem;
     }
 
-    /* ── Address Block ── */
+    .badge-safety {
+      background: rgba(196,82,74,0.1);
+      color: var(--camellia);
+    }
+
+    .badge-responsibility {
+      background: rgba(232,133,58,0.1);
+      color: var(--tangerine);
+    }
+
+    .badge-environment {
+      background: rgba(74,103,65,0.1);
+      color: var(--gotjawal);
+    }
+
+    /* ══════════════════════════════════════
+       Address Block
+       ══════════════════════════════════════ */
     .address-block {
-      background: rgba(255,255,255,0.12);
-      border-radius: 12px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 10px;
       padding: 1.5rem;
-      margin-top: 1.5rem;
-      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
     }
 
     .address-block .addr {
+      font-family: var(--font-display);
       font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
     }
 
     .address-block .transport {
-      font-size: 0.9rem;
-      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: var(--fs-small);
+      color: rgba(44,44,44,0.7);
+      margin-bottom: 0.3rem;
+    }
+
+    .address-block .transport .icon {
+      color: var(--ocean);
+      --icon-size: 16px;
     }
 
     .map-link {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
       margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: rgba(255,255,255,0.2);
+      padding: 0.55rem 1.1rem;
+      background: var(--gotjawal);
       color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 0.85rem;
+      border-radius: 6px;
+      font-size: var(--fs-small);
       font-weight: 600;
-      transition: background 0.2s;
+      transition: background 0.2s var(--ease-out);
     }
 
     .map-link:hover {
-      background: rgba(255,255,255,0.3);
+      background: var(--gotjawal-deep);
+      color: #fff;
     }
 
-    /* ── Place List ── */
+    .map-link .icon { --icon-size: 16px; }
+
+    /* ══════════════════════════════════════
+       Place List
+       ══════════════════════════════════════ */
+    .place-category {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--gotjawal);
+      margin: 1.75rem 0 0.6rem;
+    }
+
+    .place-category:first-of-type { margin-top: 0; }
+
+    .place-category .icon {
+      --icon-size: 16px;
+      color: var(--gotjawal-light);
+    }
+
     .place-grid {
       display: grid;
-      gap: 0.8rem;
+      gap: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .place-grid { grid-template-columns: 1fr 1fr; }
     }
 
     .place-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 1.2rem;
+      padding: 0.75rem 1rem;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+      border-radius: 8px;
       border: 1px solid rgba(0,0,0,0.05);
+      transition: transform 0.2s var(--ease-out), border-color 0.2s;
     }
 
-    .place-item .name {
-      font-weight: 600;
-      font-size: 0.95rem;
+    .place-item:hover {
+      transform: translateX(4px);
+      border-color: var(--gotjawal-light);
     }
 
-    .place-item .time {
-      font-size: 0.8rem;
-      color: #0f927d;
+    .place-name {
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--basalt);
+      text-decoration: none;
+    }
+
+    a.place-name:hover {
+      color: var(--gotjawal);
+    }
+
+    .place-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    .place-map-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: rgba(90,143,168,0.08);
+      color: var(--ocean);
+      text-decoration: none;
+      transition: background 0.2s var(--ease-out), color 0.2s;
+    }
+
+    .place-map-btn:hover {
+      background: var(--ocean);
+      color: #fff;
+    }
+
+    .place-map-btn .icon { --icon-size: 14px; }
+
+    .place-time {
+      font-size: 0.75rem;
       font-weight: 600;
-      background: rgba(15,146,125,0.08);
-      padding: 0.2rem 0.6rem;
+      color: var(--ocean);
+      background: rgba(90,143,168,0.08);
+      padding: 0.15rem 0.55rem;
       border-radius: 1rem;
       white-space: nowrap;
     }
 
-    .place-category {
-      font-size: 0.85rem;
+    /* Highlighted place item */
+    .place-item-highlight {
+      border-color: var(--gotjawal-light);
+      background: rgba(107,143,98,0.04);
+    }
+
+    .place-item-highlight .place-time {
+      color: var(--gotjawal);
+      background: rgba(74,103,65,0.1);
+    }
+
+    /* ══════════════════════════════════════
+       Caution Section — 2 Groups
+       ══════════════════════════════════════ */
+    .caution-group {
+      margin-bottom: 2rem;
+    }
+
+    .caution-group:last-child { margin-bottom: 0; }
+
+    .caution-group-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin: 1.5rem 0 0.8rem;
-      color: #0f927d;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .place-category:first-child {
-      margin-top: 0;
+    .caution-group-title .icon { --icon-size: 18px; }
+
+    .caution-group-safety .caution-group-title {
+      color: var(--camellia);
     }
 
-    /* ── Closing ── */
+    .caution-group-story .caution-group-title {
+      color: var(--gotjawal);
+    }
+
+    /* ══════════════════════════════════════
+       Closing Section
+       ══════════════════════════════════════ */
     .closing {
+      background: var(--gotjawal-deep);
+      color: var(--parchment);
       text-align: center;
+      padding: clamp(4rem, 3rem + 5vw, 8rem) var(--section-px);
+      position: relative;
+      overflow: hidden;
     }
 
-    .closing h2 {
-      font-size: 2rem;
-      font-weight: 900;
-      margin-bottom: 0.5rem;
-      letter-spacing: -1px;
+    /* Ellipse clip-path hill transition */
+    .closing::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -5%;
+      right: -5%;
+      height: 60px;
+      background: var(--parchment);
+      clip-path: ellipse(55% 100% at 50% 0%);
+    }
+
+    .closing-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-h1);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
     }
 
     .closing p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      line-height: 1.8;
+      font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+      line-height: 2;
+      opacity: 0.85;
+      font-family: var(--font-display);
     }
 
-    /* ── Warning Badge ── */
-    .warning-badge {
-      display: inline-block;
-      background: rgba(255, 237, 18, 0.3);
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      margin-bottom: 0.3rem;
-    }
-
-    /* ── Footer ── */
+    /* ══════════════════════════════════════
+       Footer
+       ══════════════════════════════════════ */
     footer {
-      background: #1a1a1a;
-      color: rgba(255,255,255,0.5);
+      background: var(--basalt-warm);
+      color: rgba(250,248,245,0.45);
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.8rem;
+      padding: 1.75rem var(--section-px);
+      font-size: 0.78rem;
+      letter-spacing: 0.01em;
     }
 
-    /* ── Responsive ── */
-    @media (min-width: 768px) {
-      section {
-        padding: 6rem 2rem 4rem;
-      }
-
-      .hero h1 {
-        font-size: 4rem;
-      }
-
-      .hero .subtitle {
-        font-size: 2rem;
-      }
-
-      .section-title {
-        font-size: 2.2rem;
-      }
-
-      .card-grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-
-      .card-grid-2 .card {
-        margin-bottom: 0;
-      }
-
-      .place-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    /* ── Scroll Animation ── */
-    .fade-in {
+    /* ══════════════════════════════════════
+       Reveal Animation
+       ══════════════════════════════════════ */
+    .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
     }
 
-    .fade-in.visible {
+    .reveal.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .reveal-stagger > .reveal {
+      transition-delay: calc(var(--i, 0) * 0.08s);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .hero-scroll { animation: none; }
+    }
+
+    /* ══════════════════════════════════════
+       Mobile adjustments
+       ══════════════════════════════════════ */
+
+    /* Bottom nav spacer on mobile */
+    body::after {
+      content: '';
+      display: block;
+      height: calc(3.5rem + env(safe-area-inset-bottom));
+    }
+
+    @media (min-width: 768px) {
+      body::after { display: none; }
+
+      /* Top nav spacer on desktop */
+      .hero { margin-top: 0; }
     }
   </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-  <a href="#hero">홈</a>
-  <a href="#location">찾아오는 길</a>
-  <a href="#before">입주 전</a>
-  <a href="#after">입주 후</a>
-  <a href="#caution">주의사항</a>
-  <a href="#nearby">주변 안내</a>
+<!-- ════════════════ Navigation ════════════════ -->
+<nav class="nav" aria-label="main navigation">
+  <a href="#hero" class="nav-link active" aria-label="홈">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    <span>홈</span>
+  </a>
+  <a href="#location" class="nav-link" aria-label="찾아오는 길">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+    <span>위치</span>
+  </a>
+  <a href="#before" class="nav-link" aria-label="입주 전">
+    <svg class="icon" viewBox="0 0 24 24"><path d="m15 7-6.5 6.5a1.5 1.5 0 0 0 3 3L18 10"/><path d="M9.305 16.695a5.003 5.003 0 0 1-2.214-6.37L3.68 6.914a.5.5 0 0 1 .1-.737l1.414-1.06a.5.5 0 0 1 .662.05l5.09 5.09"/><path d="M14.695 7.305a5.003 5.003 0 0 1 6.37 2.214l3.411 3.411a.5.5 0 0 1-.1.737l-1.414 1.06a.5.5 0 0 1-.662-.05l-5.09-5.09"/></svg>
+    <span>입주 전</span>
+  </a>
+  <a href="#after" class="nav-link" aria-label="입주 후">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    <span>입주 후</span>
+  </a>
+  <a href="#caution" class="nav-link" aria-label="주의사항">
+    <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+    <span>주의</span>
+  </a>
+  <a href="#nearby" class="nav-link" aria-label="주변 안내">
+    <svg class="icon" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+    <span>주변</span>
+  </a>
 </nav>
 
-<!-- 1. Hero / Cover -->
+<!-- ════════════════ Hero ════════════════ -->
 <section id="hero" class="hero">
-  <div class="container">
-    <h1>선흘곶 사계</h1>
-    <div class="divider"></div>
-    <p class="subtitle">입주 안내</p>
-    <p class="scroll-hint">아래로 스크롤 ↓</p>
+  <div class="hero-media">
+    <img src="images/hero.jpg" alt="눈 내리는 선흘곶 사계 전경">
   </div>
-</section>
 
-<!-- 2. 찾아오는 길 -->
-<section id="location" class="theme-teal">
   <div class="container">
-    <h2 class="section-title fade-in">
-      <span class="accent">Location</span>
-      찾아오는 길
-    </h2>
-    <div class="address-block fade-in">
-      <p class="addr">제주특별자치도 제주시 조천읍 선흘동1길 58</p>
-      <p class="transport">🚌 버스 704-4 &lsquo;선흘초등학교 앞&rsquo; 정류장</p>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%A1%B0%EC%B2%9C%EC%9D%8D%20%EC%84%A0%ED%9D%98%EB%8F%991%EA%B8%B8%2058" target="_blank" rel="noopener" class="map-link">📍 네이버 지도에서 보기</a>
+    <p class="hero-label reveal">Jeju, Seonheul-ri</p>
+    <h1 class="hero-title reveal">선흘곶 사계</h1>
+    <div class="hero-divider reveal"></div>
+    <p class="hero-subtitle reveal">입주 안내</p>
+    <div class="hero-scroll reveal">
+      <svg class="icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
     </div>
   </div>
 </section>
 
-<!-- 3. 입주 전 안내사항 -->
-<section id="before" class="theme-darkblue">
+<!-- ════════════════ 찾아오는 길 ════════════════ -->
+<section id="location" class="bg-stone-warm accent-top accent-gotjawal">
   <div class="container">
-    <h2 class="section-title fade-in">
-      <span class="accent">Before Check-in</span>
-      입주 전 안내사항
-    </h2>
-    <div class="card-grid-2">
-      <div class="card fade-in">
-        <div class="card-icon">🔑</div>
-        <h3>비밀번호</h3>
-        <p>입주 비밀번호는 게스트님의 <span class="highlight">전화번호 뒷 네자리</span>입니다.</p>
+    <div class="section-header reveal">
+      <p class="section-label">Location</p>
+      <h2 class="section-title">찾아오는 길</h2>
+      <div class="section-line" style="background: var(--gotjawal)"></div>
+    </div>
+
+    <div class="address-block reveal">
+      <p class="addr">제주특별자치도 제주시 조천읍 선흘동1길 58</p>
+      <p class="transport">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></svg>
+        버스 704-4 '선흘초등학교 앞' 정류장
+      </p>
+      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%A1%B0%EC%B2%9C%EC%9D%8D%20%EC%84%A0%ED%9D%98%EB%8F%991%EA%B8%B8%2058" target="_blank" rel="noopener" class="map-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        네이버 지도에서 보기
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 입주 전 안내사항 ════════════════ -->
+<section id="before" class="bg-parchment accent-top accent-ocean">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Before Check-in</p>
+      <h2 class="section-title">입주 전 안내사항</h2>
+      <div class="section-line" style="background: var(--ocean)"></div>
+    </div>
+
+    <div class="card-grid card-grid-2 reveal-stagger">
+      <div class="card reveal" style="--i:0">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m21 2-8.16 7.17"/><path d="m12.83 9.17 2 2"/><path d="m15 12-4.17 4.17"/><path d="M20 2H8l-6 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg>
+          <h3>비밀번호</h3>
+        </div>
+        <p>입주 비밀번호는 게스트님의 <span class="hl">전화번호 뒷 네자리</span>입니다.</p>
       </div>
-      <div class="card fade-in">
-        <div class="card-icon">🕓</div>
-        <h3>체크인 / 체크아웃</h3>
-        <p>체크인은 <span class="highlight">4시 이후</span>, 체크아웃은 <span class="highlight">11시까지</span></p>
+
+      <div class="card reveal" style="--i:1">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <h3>체크인 / 체크아웃</h3>
+        </div>
+        <p>체크인은 <span class="hl">3시 이후</span>, 체크아웃은 <span class="hl">11시까지</span></p>
       </div>
-      <div class="card fade-in">
-        <div class="card-icon">🔥</div>
-        <h3>난방 및 온수</h3>
+
+      <div class="card reveal" style="--i:2">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          <h3>난방 및 온수</h3>
+        </div>
         <p>2층 난방은 전기, 1층 난방과 온수는 LPG 가스를 사용합니다.</p>
       </div>
-      <div class="card fade-in">
-        <div class="card-icon">💧</div>
-        <h3>절약 협조</h3>
+
+      <div class="card reveal" style="--i:3">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+          <h3>절약 협조</h3>
+        </div>
         <p>제주의 물 부족과 에너지 비용을 고려하여 절약에 협조 부탁드립니다.</p>
       </div>
-      <div class="card fade-in">
-        <div class="card-icon">🚫</div>
-        <h3>파티 금지</h3>
-        <p><span class="highlight">10시 이후 파티는 절대 금지</span>입니다.</p>
+
+      <div class="card card-warning reveal" style="--i:4">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+          <h3>파티 금지</h3>
+        </div>
+        <p><span class="hl">10시 이후 파티는 절대 금지</span>입니다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4. 입주 후 안내사항 -->
-<section id="after" class="theme-lightblue">
+<!-- ════════════════ 입주 후 안내사항 ════════════════ -->
+<section id="after" class="bg-stone-warm accent-top accent-gotjawal-light">
   <div class="container">
-    <h2 class="section-title fade-in">
-      <span class="accent">After Check-in</span>
-      입주 후 안내사항
-    </h2>
-    <div class="card fade-in">
-      <div class="card-icon">🛏️</div>
-      <h3>이불 안내</h3>
-      <p>이불은 퀸베드와 요청하신 인원수 만큼 요세트를 준비했습니다. 2인은 퀸베드, 3인은 1인 요세트, 4인은 2인 요세트가 추가 제공됩니다. <span class="highlight">방문 손님의 추가 이불은 제공하지 않습니다.</span></p>
+    <div class="section-header reveal">
+      <p class="section-label">After Check-in</p>
+      <h2 class="section-title">입주 후 안내사항</h2>
+      <div class="section-line" style="background: var(--gotjawal-light)"></div>
     </div>
-    <div class="card fade-in">
-      <div class="card-icon">📶</div>
-      <h3>와이파이</h3>
-      <p>신발장 위에 위치한 공유기 상단에 프린트된 <span class="highlight">QR코드를 스캔</span>하시거나, 공유기 바닥의 공유기명과 비밀번호를 확인 후 사용 가능합니다. (KT)</p>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">♻️</div>
-      <h3>쓰레기 배출</h3>
-      <p>쓰레기 배출 및 분리수거는 <span class="highlight">&lsquo;선흘1리 재활용 도움센터(선흘리2541-1)&rsquo;</span>에 직접 가져가시면 상주하시는 분이 친절하게 도와주십니다.</p>
+
+    <div class="card-grid reveal-stagger">
+      <div class="card reveal" style="--i:0">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+          <h3>이불 안내</h3>
+        </div>
+        <p>퀸베드용 이불과 입주 전 요청하신 인원수 만큼 준비했습니다. 2인은 퀸베드, 3인은 1인 요세트, 4인은 2인 요세트가 추가 제공됩니다. <span class="hl">입주 후 추가 이불은 제공하지 않습니다.</span></p>
+      </div>
+
+      <div class="card reveal" style="--i:1">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg>
+          <h3>와이파이</h3>
+        </div>
+        <p>신발장 위에 위치한 공유기 상단에 프린트된 <span class="hl">QR코드를 스캔</span>하시거나, 공유기 바닥의 공유기명과 비밀번호를 확인 후 사용 가능합니다. (KT)</p>
+      </div>
+
+      <div class="card reveal" style="--i:2">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.013 3a1.784 1.784 0 0 1 1.575.887l4.76 8.25"/><path d="m9.344 5.811-4.093 2.36"/></svg>
+          <h3>쓰레기 배출</h3>
+        </div>
+        <p>쓰레기 배출 및 분리수거는 <span class="hl">'선흘1리 재활용 도움센터(선흘리2541-1)'</span>에 직접 가져가시면 상주하시는 분이 친절하게 도와주십니다.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 5 & 6. 주의사항 -->
-<section id="caution" class="theme-darkblue">
+<!-- ════════════════ 주의사항 ════════════════ -->
+<section id="caution" class="bg-stone accent-top accent-camellia">
   <div class="container">
-    <h2 class="section-title fade-in">
-      <span class="accent">Caution</span>
-      주의사항 및 전하는 말
-    </h2>
-    <div class="card fade-in">
-      <span class="warning-badge">안전</span>
-      <h3>복층 계단 이용</h3>
-      <p>복층형 숙소이므로 계단 이용 시 주의해 주세요.</p>
+    <div class="section-header reveal">
+      <p class="section-label">Caution</p>
+      <h2 class="section-title">주의사항 및 전하는 말</h2>
+      <div class="section-line" style="background: var(--camellia)"></div>
     </div>
-    <div class="card fade-in">
-      <span class="warning-badge">안전</span>
-      <h3>2층 해먹</h3>
-      <p>2층 해먹은 <span class="highlight">어린이 사용 금지</span>이며, 성인 1인만 이용 가능합니다.</p>
+
+    <!-- Group 1: 안전 및 규칙 -->
+    <div class="caution-group caution-group-safety reveal-stagger">
+      <div class="caution-group-title reveal" style="--i:0">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+        안전 및 규칙
+      </div>
+
+      <div class="card card-warning reveal" style="--i:1">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <h3>복층 계단 이용</h3>
+        </div>
+        <p>복층형 숙소이므로 계단 이용 시 주의해 주세요.</p>
+      </div>
+
+      <div class="card card-warning reveal" style="--i:2">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <h3>2층 해먹</h3>
+        </div>
+        <p>2층 해먹은 <span class="hl">어린이 사용 금지</span>이며, 성인 1인만 이용 가능합니다.</p>
+      </div>
+
+      <div class="card card-warning reveal" style="--i:3">
+        <span class="badge badge-responsibility">책임</span>
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <h3>안전사고</h3>
+        </div>
+        <p>부주의로 인한 사고에 대해서는 책임지지 않습니다.</p>
+      </div>
+
+      <div class="card card-warning reveal" style="--i:4">
+        <span class="badge badge-environment">환경</span>
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.013 3a1.784 1.784 0 0 1 1.575.887l4.76 8.25"/><path d="m9.344 5.811-4.093 2.36"/></svg>
+          <h3>쓰레기 관리</h3>
+        </div>
+        <p>쓰레기는 실내에 보관해 주시고, 외부에 노출하지 말아 주세요.</p>
+      </div>
     </div>
-    <div class="card fade-in">
-      <span class="warning-badge">책임</span>
-      <h3>안전사고</h3>
-      <p>부주의로 인한 사고에 대해서는 책임지지 않습니다.</p>
-    </div>
-    <div class="card fade-in">
-      <span class="warning-badge">환경</span>
-      <h3>쓰레기 관리</h3>
-      <p>쓰레기는 실내에 보관해 주시고, 외부에 노출하지 말아 주세요.</p>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">🐾</div>
-      <h3>반려동물</h3>
-      <p>반려동물은 꼭 <span class="highlight">마당과 1층에서만</span> 지내게 해주세요. 안전상, 위생상 2층에 올리지 않도록 부탁드립니다.</p>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">📺</div>
-      <h3>TV 없는 공간</h3>
-      <p>저희 집은 TV가 없습니다. 오롯이 제주의 자연과 자기 자신을 느끼는 시간이 되기를 바랍니다.</p>
-    </div>
-    <div class="card fade-in">
-      <div class="card-icon">🔥</div>
-      <h3>바베큐</h3>
-      <p>바베큐 이용 시 창고에 있는 그릴을 직접 꺼내서 사용하시면 됩니다. (숯과 망은 개인 준비)</p>
+
+    <!-- Group 2: 우리 집 이야기 -->
+    <div class="caution-group caution-group-story reveal-stagger">
+      <div class="caution-group-title reveal" style="--i:0">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        우리 집 이야기
+      </div>
+
+      <div class="card card-story reveal" style="--i:1">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><path d="M4 10.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.5"/><path d="M5.39 7.41A2 2 0 0 1 7.3 6h9.4a2 2 0 0 1 1.91 1.41l.44 1.49"/><path d="M12 6v4"/></svg>
+          <h3>반려동물</h3>
+        </div>
+        <p>반려동물은 꼭 <span class="hl">마당과 1층에서만</span> 지내게 해주세요. 안전상, 위생상 2층에 올리지 않도록 부탁드립니다.</p>
+      </div>
+
+      <div class="card card-story reveal" style="--i:2">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+          <h3>TV 없는 공간</h3>
+        </div>
+        <p>저희 집은 TV가 없습니다. 오롯이 제주의 자연과 자기 자신을 느끼는 시간이 되기를 바랍니다.</p>
+      </div>
+
+      <div class="card card-story reveal" style="--i:3">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          <h3>바베큐</h3>
+        </div>
+        <p>바베큐 이용 시 창고에 있는 그릴을 직접 꺼내서 사용하시면 됩니다. (숯과 망은 개인 준비)</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 7 & 8. 주변 안내 -->
-<section id="nearby" class="theme-lightblue">
+<!-- ════════════════ 주변 안내 ════════════════ -->
+<section id="nearby" class="bg-parchment accent-top accent-tangerine">
   <div class="container">
-    <h2 class="section-title fade-in">
-      <span class="accent">Nearby</span>
-      주변 안내
-    </h2>
+    <div class="section-header reveal">
+      <p class="section-label">Nearby</p>
+      <h2 class="section-title">주변 안내</h2>
+      <div class="section-line" style="background: var(--tangerine)"></div>
+    </div>
 
-    <p class="place-category fade-in">🛒 마트 · 편의점</p>
-    <div class="place-grid fade-in">
+    <p class="place-category reveal">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+      마트 &middot; 편의점
+    </p>
+    <div class="place-grid reveal">
       <div class="place-item">
-        <span class="name">함덕 농협 하나로마트</span>
-        <span class="time">차 10분</span>
+        <span class="place-name">함덕 농협 하나로마트</span>
+        <div class="place-meta">
+          <span class="place-time">차 10분</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1247186686" target="_blank" rel="noopener" aria-label="함덕 농협 하나로마트 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
       <div class="place-item">
-        <span class="name">선흘 CU 편의점</span>
-        <span class="time">차 2분</span>
+        <span class="place-name">선흘 CU 편의점</span>
+        <div class="place-meta">
+          <span class="place-time">차 2분</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1721330656" target="_blank" rel="noopener" aria-label="선흘 CU 편의점 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item">
+        <span class="place-name">GS25 제주선흘점</span>
+        <div class="place-meta">
+          <span class="place-time">차 2분</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/563042992" target="_blank" rel="noopener" aria-label="GS25 제주선흘점 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
     </div>
 
-    <p class="place-category fade-in">🍽️ 식당</p>
-    <div class="place-grid fade-in">
-      <div class="place-item">
-        <span class="name">353 식당</span>
-        <span class="time">차 2분</span>
+    <p class="place-category reveal">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"/><path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"/></svg>
+      식당
+    </p>
+    <div class="place-grid reveal-stagger">
+      <div class="place-item reveal" style="--i:0">
+        <span class="place-name">선흘방주할머니식당</span>
+        <div class="place-meta">
+          <span class="place-time">한식</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/21509975" target="_blank" rel="noopener" aria-label="선흘방주할머니식당 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">제주한면가</span>
-        <span class="time">차 2분</span>
+      <div class="place-item reveal" style="--i:1">
+        <span class="place-name">오름나그네</span>
+        <div class="place-meta">
+          <span class="place-time">한식</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/12547137" target="_blank" rel="noopener" aria-label="오름나그네 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">선흘방주할머니식당</span>
-        <span class="time">차 7분</span>
+      <div class="place-item reveal" style="--i:2">
+        <span class="place-name">선흘곶</span>
+        <div class="place-meta">
+          <span class="place-time">쌈밥</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/19934545" target="_blank" rel="noopener" aria-label="선흘곶 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">선국수</span>
-        <span class="time">차 5분</span>
+      <div class="place-item reveal" style="--i:3">
+        <span class="place-name">제주한면가</span>
+        <div class="place-meta">
+          <span class="place-time">국수</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/2042938935" target="_blank" rel="noopener" aria-label="제주한면가 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">곤밥이</span>
-        <span class="time">차 13분</span>
+      <div class="place-item reveal" style="--i:4">
+        <span class="place-name">오름지기</span>
+        <div class="place-meta">
+          <span class="place-time">국수</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/10635561" target="_blank" rel="noopener" aria-label="오름지기 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">칠돈가 함덕흑돼지</span>
-        <span class="time">차 10분</span>
+      <div class="place-item reveal" style="--i:5">
+        <span class="place-name">353숯불갈비</span>
+        <div class="place-meta">
+          <span class="place-time">갈비</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/441184288" target="_blank" rel="noopener" aria-label="353숯불갈비 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">삼구회포장센터</span>
-        <span class="time">차 12분</span>
+      <div class="place-item reveal" style="--i:6">
+        <span class="place-name">오선</span>
+        <div class="place-meta">
+          <span class="place-time">고기</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1976325076" target="_blank" rel="noopener" aria-label="오선 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
     </div>
 
-    <p class="place-category fade-in">☕ 카페 · 베이커리</p>
-    <div class="place-grid fade-in">
-      <div class="place-item">
-        <span class="name">카페선흘</span>
-        <span class="time">차 7분</span>
+    <p class="place-category reveal">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+      카페
+    </p>
+    <div class="place-grid reveal-stagger">
+      <div class="place-item reveal" style="--i:0">
+        <span class="place-name">베카신</span>
+        <div class="place-meta">
+          <span class="place-time">디저트카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/208751122" target="_blank" rel="noopener" aria-label="베카신 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">오드랑베이커리</span>
-        <span class="time">차 11분</span>
+      <div class="place-item reveal" style="--i:1">
+        <span class="place-name">카페679</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/89568104" target="_blank" rel="noopener" aria-label="카페679 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">제주북카페 올드북촌</span>
-        <span class="time">차 7분</span>
+      <div class="place-item reveal" style="--i:2">
+        <span class="place-name">흘</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1878838597" target="_blank" rel="noopener" aria-label="흘 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:3">
+        <span class="place-name">마실</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/220828207" target="_blank" rel="noopener" aria-label="마실 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:4">
+        <span class="place-name">자드부팡</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/2144187164" target="_blank" rel="noopener" aria-label="자드부팡 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:5">
+        <span class="place-name">카페세바</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/17086100" target="_blank" rel="noopener" aria-label="카페세바 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:6">
+        <span class="place-name">채식카페 작은부엌</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/21543202" target="_blank" rel="noopener" aria-label="채식카페 작은부엌 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:7">
+        <span class="place-name">카페 동백</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1208953462" target="_blank" rel="noopener" aria-label="카페 동백 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:8">
+        <span class="place-name">단추숲</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1380538907" target="_blank" rel="noopener" aria-label="단추숲 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:9">
+        <span class="place-name">안티코</span>
+        <div class="place-meta">
+          <span class="place-time">커피전문점</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1575459742" target="_blank" rel="noopener" aria-label="안티코 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:10">
+        <span class="place-name">비케이브</span>
+        <div class="place-meta">
+          <span class="place-time">카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/119385518" target="_blank" rel="noopener" aria-label="비케이브 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:11">
+        <span class="place-name">구좌상회</span>
+        <div class="place-meta">
+          <span class="place-time">디저트카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/26884074" target="_blank" rel="noopener" aria-label="구좌상회 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:12">
+        <span class="place-name">마마미니</span>
+        <div class="place-meta">
+          <span class="place-time">갤러리카페</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/507163800" target="_blank" rel="noopener" aria-label="마마미니 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
     </div>
 
-    <p class="place-category fade-in">🏔️ 관광 · 여가</p>
-    <div class="place-grid fade-in">
-      <div class="place-item">
-        <span class="name">동백동산 곶자왈</span>
-        <span class="time">바로 앞</span>
+    <p class="place-category reveal">
+      <svg class="icon" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+      관광 &middot; 여가
+    </p>
+    <div class="place-grid reveal-stagger">
+      <div class="place-item place-item-highlight reveal" style="--i:0">
+        <span class="place-name">동백동산</span>
+        <div class="place-meta">
+          <span class="place-time">바로 앞</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8335690" target="_blank" rel="noopener" aria-label="동백동산 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">돌하르방미술관</span>
-        <span class="time">차 8분</span>
+      <div class="place-item reveal" style="--i:1">
+        <span class="place-name">올티스</span>
+        <div class="place-meta">
+          <span class="place-time">관광명소</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/426667759" target="_blank" rel="noopener" aria-label="올티스 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">크라운컨트리클럽</span>
-        <span class="time">차 8분</span>
+      <div class="place-item reveal" style="--i:2">
+        <span class="place-name">귤의 정원 바령</span>
+        <div class="place-meta">
+          <span class="place-time">관광농원</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1021330156" target="_blank" rel="noopener" aria-label="귤의 정원 바령 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
-      <div class="place-item">
-        <span class="name">함덕해수욕장</span>
-        <span class="time">차 10분</span>
+      <div class="place-item reveal" style="--i:3">
+        <span class="place-name">낙선동 4·3성</span>
+        <div class="place-meta">
+          <span class="place-time">유적지</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/815714167" target="_blank" rel="noopener" aria-label="낙선동 4·3성 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:4">
+        <span class="place-name">후박나무길</span>
+        <div class="place-meta">
+          <span class="place-time">테마거리</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1788215084" target="_blank" rel="noopener" aria-label="후박나무길 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:5">
+        <span class="place-name">선녀와나무꾼 테마공원</span>
+        <div class="place-meta">
+          <span class="place-time">테마파크</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/12501734" target="_blank" rel="noopener" aria-label="선녀와나무꾼 테마공원 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:6">
+        <span class="place-name">동백동산습지센터</span>
+        <div class="place-meta">
+          <span class="place-time">관광명소</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/26874134" target="_blank" rel="noopener" aria-label="동백동산습지센터 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:7">
+        <span class="place-name">우진제비오름</span>
+        <div class="place-meta">
+          <span class="place-time">오름</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8460981" target="_blank" rel="noopener" aria-label="우진제비오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:8">
+        <span class="place-name">거문오름</span>
+        <div class="place-meta">
+          <span class="place-time">오름</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/18489468" target="_blank" rel="noopener" aria-label="거문오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:9">
+        <span class="place-name">골체오름</span>
+        <div class="place-meta">
+          <span class="place-time">오름</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8188069" target="_blank" rel="noopener" aria-label="골체오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div class="place-item reveal" style="--i:10">
+        <span class="place-name">알밤오름</span>
+        <div class="place-meta">
+          <span class="place-time">오름</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8490981" target="_blank" rel="noopener" aria-label="알밤오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 9. Closing -->
-<section class="theme-orange closing">
+<!-- ════════════════ Closing ════════════════ -->
+<section class="closing">
   <div class="container">
-    <h2 class="fade-in">선흘곶 사계</h2>
-    <p class="fade-in">에서 편히 묵으시고<br>좋은 추억 많이 만들어 가시길<br>희망합니다 :)</p>
+    <h2 class="closing-title reveal">선흘곶 사계</h2>
+    <p class="reveal">에서 편히 묵으시고<br>좋은 추억 많이 만들어 가시길<br>희망합니다 :)</p>
   </div>
 </section>
 
+<!-- ════════════════ Footer ════════════════ -->
 <footer>
-  <p>선흘곶 사계 · 제주특별자치도 제주시 조천읍 선흘동1길 58</p>
+  <p>선흘곶 사계 &middot; 제주특별자치도 제주시 조천읍 선흘동1길 58</p>
 </footer>
 
+<!-- ════════════════ Scripts ════════════════ -->
 <script>
-  // Scroll animation
-  const observer = new IntersectionObserver((entries) => {
+  // Reveal animation with IntersectionObserver
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  // Active nav link
+  // Active nav link tracking
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav a');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  window.addEventListener('scroll', () => {
-    let current = '';
+  const updateActiveNav = () => {
+    let current = 'hero';
+    const scrollY = window.scrollY;
+
     sections.forEach(section => {
-      const top = section.offsetTop - 100;
+      const top = section.offsetTop - 120;
       if (scrollY >= top) current = section.getAttribute('id');
     });
+
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
     });
-  });
+  };
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
 </script>
 
 </body>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>선흘곶 사계 | 입주 안내</title>
-  <meta name="description" content="선흘곶 사계 숙소 입주 안내 - 제주 선흘리 곶자왈 앞 자연 속 쉼터">
+  <title>Seonheulgot Sagye | Guest Guide</title>
+  <meta name="description" content="Seonheulgot Sagye Guest Guide - A nature retreat in front of Gotjawal, Seonheul-ri, Jeju">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -254,6 +254,14 @@
         bottom: auto;
         right: 1rem;
         top: 0.6rem;
+      }
+    }
+
+    /* Mobile: move to top-right corner above content */
+    @media (max-width: 767px) {
+      .lang-switch {
+        top: 0.75rem;
+        right: 0.75rem;
       }
     }
 
@@ -812,85 +820,85 @@
 <body>
 
 <!-- ════════════════ Language Switcher ════════════════ -->
-<a href="en.html" class="lang-switch" aria-label="Switch to English">
+<a href="index.html" class="lang-switch" aria-label="Switch to Korean">
   <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-  EN
+  KO
 </a>
 
 <!-- ════════════════ Navigation ════════════════ -->
 <nav class="nav" aria-label="main navigation">
-  <a href="#hero" class="nav-link active" aria-label="홈">
+  <a href="#hero" class="nav-link active" aria-label="Home">
     <svg class="icon" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-    <span>홈</span>
+    <span>Home</span>
   </a>
-  <a href="#location" class="nav-link" aria-label="찾아오는 길">
+  <a href="#location" class="nav-link" aria-label="Location">
     <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-    <span>위치</span>
+    <span>Location</span>
   </a>
-  <a href="#before" class="nav-link" aria-label="입주 전">
+  <a href="#before" class="nav-link" aria-label="Before Check-in">
     <svg class="icon" viewBox="0 0 24 24"><path d="m15 7-6.5 6.5a1.5 1.5 0 0 0 3 3L18 10"/><path d="M9.305 16.695a5.003 5.003 0 0 1-2.214-6.37L3.68 6.914a.5.5 0 0 1 .1-.737l1.414-1.06a.5.5 0 0 1 .662.05l5.09 5.09"/><path d="M14.695 7.305a5.003 5.003 0 0 1 6.37 2.214l3.411 3.411a.5.5 0 0 1-.1.737l-1.414 1.06a.5.5 0 0 1-.662-.05l-5.09-5.09"/></svg>
-    <span>입주 전</span>
+    <span>Before</span>
   </a>
-  <a href="#after" class="nav-link" aria-label="입주 후">
+  <a href="#after" class="nav-link" aria-label="After Check-in">
     <svg class="icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-    <span>입주 후</span>
+    <span>After</span>
   </a>
-  <a href="#caution" class="nav-link" aria-label="주의사항">
+  <a href="#caution" class="nav-link" aria-label="Caution">
     <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-    <span>주의</span>
+    <span>Caution</span>
   </a>
-  <a href="#nearby" class="nav-link" aria-label="주변 안내">
+  <a href="#nearby" class="nav-link" aria-label="Nearby">
     <svg class="icon" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
-    <span>주변</span>
+    <span>Nearby</span>
   </a>
 </nav>
 
 <!-- ════════════════ Hero ════════════════ -->
 <section id="hero" class="hero">
   <div class="hero-media">
-    <img src="images/hero.jpg" alt="눈 내리는 선흘곶 사계 전경">
+    <img src="images/hero.jpg" alt="Seonheulgot Sagye in the snow">
   </div>
 
   <div class="container">
     <p class="hero-label reveal">Jeju, Seonheul-ri</p>
-    <h1 class="hero-title reveal">선흘곶 사계</h1>
+    <h1 class="hero-title reveal">Seonheulgot Sagye</h1>
     <div class="hero-divider reveal"></div>
-    <p class="hero-subtitle reveal">입주 안내</p>
+    <p class="hero-subtitle reveal">Guest Guide</p>
     <div class="hero-scroll reveal">
       <svg class="icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ 찾아오는 길 ════════════════ -->
+<!-- ════════════════ Location ════════════════ -->
 <section id="location" class="bg-stone-warm accent-top accent-gotjawal">
   <div class="container">
     <div class="section-header reveal">
       <p class="section-label">Location</p>
-      <h2 class="section-title">찾아오는 길</h2>
+      <h2 class="section-title">How to Get Here</h2>
       <div class="section-line" style="background: var(--gotjawal)"></div>
     </div>
 
     <div class="address-block reveal">
-      <p class="addr">제주특별자치도 제주시 조천읍 선흘동1길 58</p>
+      <p class="addr">58 Seonheuldong 1-gil, Jocheon-eup, Jeju-si, Jeju</p>
       <p class="transport">
         <svg class="icon" viewBox="0 0 24 24"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></svg>
-        버스 704-4 '선흘초등학교 앞' 정류장
+        Bus 704-4, stop at 'Seonheul Elementary School'
       </p>
       <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%A1%B0%EC%B2%9C%EC%9D%8D%20%EC%84%A0%ED%9D%98%EB%8F%991%EA%B8%B8%2058" target="_blank" rel="noopener" class="map-link">
         <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-        네이버 지도에서 보기
+        View on Naver Map
       </a>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ 입주 전 안내사항 ════════════════ -->
+<!-- ════════════════ Before Check-in ════════════════ -->
 <section id="before" class="bg-parchment accent-top accent-ocean">
   <div class="container">
     <div class="section-header reveal">
       <p class="section-label">Before Check-in</p>
-      <h2 class="section-title">입주 전 안내사항</h2>
+      <h2 class="section-title">Before You Arrive</h2>
       <div class="section-line" style="background: var(--ocean)"></div>
     </div>
 
@@ -898,52 +906,52 @@
       <div class="card reveal" style="--i:0">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="m21 2-8.16 7.17"/><path d="m12.83 9.17 2 2"/><path d="m15 12-4.17 4.17"/><path d="M20 2H8l-6 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg>
-          <h3>비밀번호</h3>
+          <h3>Door Code</h3>
         </div>
-        <p>입주 비밀번호는 게스트님의 <span class="hl">전화번호 뒷 네자리</span>입니다.</p>
+        <p>The door code is the <span class="hl">last 4 digits of your phone number</span>.</p>
       </div>
 
       <div class="card reveal" style="--i:1">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <h3>체크인 / 체크아웃</h3>
+          <h3>Check-in / Check-out</h3>
         </div>
-        <p>체크인은 <span class="hl">3시 이후</span>, 체크아웃은 <span class="hl">11시까지</span></p>
+        <p>Check-in is <span class="hl">after 3:00 PM</span>, check-out is by <span class="hl">11:00 AM</span>.</p>
       </div>
 
       <div class="card reveal" style="--i:2">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-          <h3>난방 및 온수</h3>
+          <h3>Heating & Hot Water</h3>
         </div>
-        <p>2층 난방은 전기, 1층 난방과 온수는 LPG 가스를 사용합니다.</p>
+        <p>The 2nd floor uses electric heating. The 1st floor heating and hot water use LPG gas.</p>
       </div>
 
       <div class="card reveal" style="--i:3">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
-          <h3>절약 협조</h3>
+          <h3>Conservation</h3>
         </div>
-        <p>제주의 물 부족과 에너지 비용을 고려하여 절약에 협조 부탁드립니다.</p>
+        <p>Please help conserve water and energy, considering Jeju's water scarcity and energy costs.</p>
       </div>
 
       <div class="card card-warning reveal" style="--i:4">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
-          <h3>파티 금지</h3>
+          <h3>No Parties</h3>
         </div>
-        <p><span class="hl">10시 이후 파티는 절대 금지</span>입니다.</p>
+        <p><span class="hl">Parties are strictly prohibited after 10:00 PM</span>.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ 입주 후 안내사항 ════════════════ -->
+<!-- ════════════════ After Check-in ════════════════ -->
 <section id="after" class="bg-stone-warm accent-top accent-gotjawal-light">
   <div class="container">
     <div class="section-header reveal">
       <p class="section-label">After Check-in</p>
-      <h2 class="section-title">입주 후 안내사항</h2>
+      <h2 class="section-title">After You Arrive</h2>
       <div class="section-line" style="background: var(--gotjawal-light)"></div>
     </div>
 
@@ -951,397 +959,397 @@
       <div class="card reveal" style="--i:0">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
-          <h3>이불 안내</h3>
+          <h3>Bedding</h3>
         </div>
-        <p>퀸베드용 이불과 입주 전 요청하신 인원수 만큼 준비했습니다. 2인은 퀸베드, 3인은 1인 요세트, 4인은 2인 요세트가 추가 제공됩니다. <span class="hl">입주 후 추가 이불은 제공하지 않습니다.</span></p>
+        <p>We've prepared bedding for the queen bed and the number of guests you requested. For 2 guests: queen bed only. For 3: one extra futon set. For 4: two extra futon sets. <span class="hl">No additional bedding is available after check-in.</span></p>
       </div>
 
       <div class="card reveal" style="--i:1">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg>
-          <h3>와이파이</h3>
+          <h3>Wi-Fi</h3>
         </div>
-        <p>신발장 위에 위치한 공유기 상단에 프린트된 <span class="hl">QR코드를 스캔</span>하시거나, 공유기 바닥의 공유기명과 비밀번호를 확인 후 사용 가능합니다. (KT)</p>
+        <p><span class="hl">Scan the QR code</span> printed on top of the router (located on the shoe cabinet), or check the network name and password on the bottom of the router. (KT)</p>
       </div>
 
       <div class="card reveal" style="--i:2">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.013 3a1.784 1.784 0 0 1 1.575.887l4.76 8.25"/><path d="m9.344 5.811-4.093 2.36"/></svg>
-          <h3>쓰레기 배출</h3>
+          <h3>Waste Disposal</h3>
         </div>
-        <p>쓰레기 배출 및 분리수거는 <span class="hl">'선흘1리 재활용 도움센터(선흘리2541-1)'</span>에 직접 가져가시면 상주하시는 분이 친절하게 도와주십니다.</p>
+        <p>Please bring your waste and recyclables to the <span class="hl">'Seonheul 1-ri Recycling Center (Seonheul-ri 2541-1)'</span>. A staff member there will kindly help you sort everything.</p>
         <div style="margin-top: 0.6rem;">
-          <a class="place-map-btn" href="https://map.kakao.com/?q=%EC%84%A0%ED%9D%981%EB%A6%AC+%EC%9E%AC%ED%99%9C%EC%9A%A9%EB%8F%84%EC%9B%80%EC%84%BC%ED%84%B0" target="_blank" rel="noopener" aria-label="재활용 도움센터 지도" style="display: inline-flex; gap: 0.35rem; width: auto; padding: 0.3rem 0.7rem; font-size: 0.75rem; font-weight: 600;"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> 지도 보기</a>
+          <a class="place-map-btn" href="https://map.kakao.com/?q=%EC%84%A0%ED%9D%981%EB%A6%AC+%EC%9E%AC%ED%99%9C%EC%9A%A9%EB%8F%84%EC%9B%80%EC%84%BC%ED%84%B0" target="_blank" rel="noopener" aria-label="Recycling center map" style="display: inline-flex; gap: 0.35rem; width: auto; padding: 0.3rem 0.7rem; font-size: 0.75rem; font-weight: 600;"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> View Map</a>
         </div>
       </div>
 
       <div class="card card-warning reveal" style="--i:3">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-          <h3>쓰레기 외부 방치 금지</h3>
+          <h3>Do Not Leave Trash Outside</h3>
         </div>
-        <p>쓰레기는 <span class="hl">절대 밖에 두지 마시고</span> 반드시 재활용 도움센터에 배출해 주세요. 주변의 새나 고양이가 바로 뜯어 흩어뜨립니다.</p>
+        <p><span class="hl">Never leave trash outside</span> the house. Please always bring it to the recycling center. Birds and cats will tear the bags open immediately.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ 주의사항 ════════════════ -->
+<!-- ════════════════ Caution ════════════════ -->
 <section id="caution" class="bg-stone accent-top accent-camellia">
   <div class="container">
     <div class="section-header reveal">
       <p class="section-label">Caution</p>
-      <h2 class="section-title">주의사항 및 전하는 말</h2>
+      <h2 class="section-title">Cautions & House Notes</h2>
       <div class="section-line" style="background: var(--camellia)"></div>
     </div>
 
-    <!-- Group 1: 안전 및 규칙 -->
+    <!-- Group 1: Safety & Rules -->
     <div class="caution-group caution-group-safety reveal-stagger">
       <div class="caution-group-title reveal" style="--i:0">
         <svg class="icon" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-        안전 및 규칙
+        Safety & Rules
       </div>
 
       <div class="card card-warning reveal" style="--i:1">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-          <h3>복층 계단 이용</h3>
+          <h3>Loft Stairs</h3>
         </div>
-        <p>복층형 숙소이므로 계단 이용 시 주의해 주세요.</p>
+        <p>This is a loft-style accommodation. Please be careful when using the stairs.</p>
       </div>
 
       <div class="card card-warning reveal" style="--i:2">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-          <h3>2층 해먹</h3>
+          <h3>2nd Floor Hammock</h3>
         </div>
-        <p>2층 해먹은 <span class="hl">어린이 사용 금지</span>이며, 성인 1인만 이용 가능합니다.</p>
+        <p>The hammock on the 2nd floor is <span class="hl">not for children</span>. Only one adult at a time.</p>
       </div>
 
       <div class="card card-warning reveal" style="--i:3">
-        <span class="badge badge-responsibility">책임</span>
+        <span class="badge badge-responsibility">LIABILITY</span>
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-          <h3>안전사고</h3>
+          <h3>Safety Accidents</h3>
         </div>
-        <p>부주의로 인한 사고에 대해서는 책임지지 않습니다.</p>
+        <p>We are not liable for accidents caused by guest negligence.</p>
       </div>
 
     </div>
 
-    <!-- Group 2: 우리 집 이야기 -->
+    <!-- Group 2: About Our Home -->
     <div class="caution-group caution-group-story reveal-stagger">
       <div class="caution-group-title reveal" style="--i:0">
         <svg class="icon" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        우리 집 이야기
+        About Our Home
       </div>
 
       <div class="card card-story reveal" style="--i:1">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><path d="M4 10.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.5"/><path d="M5.39 7.41A2 2 0 0 1 7.3 6h9.4a2 2 0 0 1 1.91 1.41l.44 1.49"/><path d="M12 6v4"/></svg>
-          <h3>반려동물</h3>
+          <h3>Pets</h3>
         </div>
-        <p>반려동물은 꼭 <span class="hl">마당과 1층에서만</span> 지내게 해주세요. 안전상, 위생상 2층에 올리지 않도록 부탁드립니다.</p>
+        <p>Please keep your pets in the <span class="hl">yard and 1st floor only</span>. For safety and hygiene, please do not allow them on the 2nd floor.</p>
       </div>
 
       <div class="card card-story reveal" style="--i:2">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-          <h3>TV 없는 공간</h3>
+          <h3>No TV</h3>
         </div>
-        <p>저희 집은 TV가 없습니다. 오롯이 제주의 자연과 자기 자신을 느끼는 시간이 되기를 바랍니다.</p>
+        <p>There is no TV in our home. We hope you can fully immerse yourself in Jeju's nature and enjoy some quality time for yourself.</p>
       </div>
 
       <div class="card card-story reveal" style="--i:3">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-          <h3>바베큐</h3>
+          <h3>Barbecue</h3>
         </div>
-        <p>바베큐 이용 시 창고에 있는 그릴을 직접 꺼내서 사용하시면 됩니다. (숯과 망은 개인 준비)</p>
+        <p>Feel free to use the grill from the storage shed for barbecue. (Please bring your own charcoal and grill grate.)</p>
       </div>
 
       <div class="card card-story reveal" style="--i:4">
         <div class="card-header">
           <svg class="icon" viewBox="0 0 24 24"><path d="M4 22V12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M2 22h20"/><circle cx="12" cy="16" r="3"/><path d="M12 13v-2"/><path d="m15 16-1.5-1.5"/><path d="M9 16l1.5-1.5"/><path d="M12 19v1"/></svg>
-          <h3>건조기</h3>
+          <h3>Dryer</h3>
         </div>
-        <p>겨울동 뒤에 창고가 있습니다. 문을 열면 건조기가 바로 보이니, 필요하시면 자유롭게 사용하세요.</p>
+        <p>There is a storage shed behind the winter building. Open the door and you'll see the dryer right away. Feel free to use it.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════ 주변 안내 ════════════════ -->
+<!-- ════════════════ Nearby ════════════════ -->
 <section id="nearby" class="bg-parchment accent-top accent-tangerine">
   <div class="container">
     <div class="section-header reveal">
       <p class="section-label">Nearby</p>
-      <h2 class="section-title">주변 안내</h2>
+      <h2 class="section-title">Nearby Places</h2>
       <div class="section-line" style="background: var(--tangerine)"></div>
     </div>
 
     <p class="place-category reveal">
       <svg class="icon" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-      마트 &middot; 편의점
+      Grocery &middot; Convenience Store
     </p>
     <div class="place-grid reveal">
       <div class="place-item">
-        <span class="place-name">함덕 농협 하나로마트</span>
+        <span class="place-name">Hamdeok Nonghyup Hanaro Mart</span>
         <div class="place-meta">
-          <span class="place-time">차 10분</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1247186686" target="_blank" rel="noopener" aria-label="함덕 농협 하나로마트 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">10 min</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1247186686" target="_blank" rel="noopener" aria-label="Hamdeok Nonghyup Hanaro Mart map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item">
-        <span class="place-name">선흘 CU 편의점</span>
+        <span class="place-name">Seonheul CU</span>
         <div class="place-meta">
-          <span class="place-time">차 2분</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1721330656" target="_blank" rel="noopener" aria-label="선흘 CU 편의점 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">2 min</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1721330656" target="_blank" rel="noopener" aria-label="Seonheul CU map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item">
-        <span class="place-name">GS25 제주선흘점</span>
+        <span class="place-name">GS25 Jeju Seonheul</span>
         <div class="place-meta">
-          <span class="place-time">차 2분</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/563042992" target="_blank" rel="noopener" aria-label="GS25 제주선흘점 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">2 min</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/563042992" target="_blank" rel="noopener" aria-label="GS25 Jeju Seonheul map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
     </div>
 
     <p class="place-category reveal">
       <svg class="icon" viewBox="0 0 24 24"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"/><path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"/></svg>
-      식당
+      Restaurants
     </p>
     <div class="place-grid reveal-stagger">
       <div class="place-item reveal" style="--i:0">
-        <span class="place-name">선흘방주할머니식당</span>
+        <span class="place-name">Bangju Grandma's</span>
         <div class="place-meta">
-          <span class="place-time">한식</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/21509975" target="_blank" rel="noopener" aria-label="선흘방주할머니식당 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Korean</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/21509975" target="_blank" rel="noopener" aria-label="Bangju Grandma's map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:1">
-        <span class="place-name">오름나그네</span>
+        <span class="place-name">Oreum Nageune</span>
         <div class="place-meta">
-          <span class="place-time">한식</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/12547137" target="_blank" rel="noopener" aria-label="오름나그네 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Korean</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/12547137" target="_blank" rel="noopener" aria-label="Oreum Nageune map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:2">
-        <span class="place-name">선흘곶</span>
+        <span class="place-name">Seonheulgot</span>
         <div class="place-meta">
-          <span class="place-time">쌈밥</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/19934545" target="_blank" rel="noopener" aria-label="선흘곶 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Wraps</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/19934545" target="_blank" rel="noopener" aria-label="Seonheulgot map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:3">
-        <span class="place-name">제주한면가</span>
+        <span class="place-name">Jeju Hanmyeonga</span>
         <div class="place-meta">
-          <span class="place-time">국수</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/2042938935" target="_blank" rel="noopener" aria-label="제주한면가 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Noodles</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/2042938935" target="_blank" rel="noopener" aria-label="Jeju Hanmyeonga map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:4">
-        <span class="place-name">오름지기</span>
+        <span class="place-name">Oreumjigi</span>
         <div class="place-meta">
-          <span class="place-time">국수</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/10635561" target="_blank" rel="noopener" aria-label="오름지기 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Noodles</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/10635561" target="_blank" rel="noopener" aria-label="Oreumjigi map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:5">
-        <span class="place-name">353숯불갈비</span>
+        <span class="place-name">353 Charcoal BBQ</span>
         <div class="place-meta">
-          <span class="place-time">갈비</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/441184288" target="_blank" rel="noopener" aria-label="353숯불갈비 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">BBQ</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/441184288" target="_blank" rel="noopener" aria-label="353 Charcoal BBQ map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:6">
-        <span class="place-name">오선</span>
+        <span class="place-name">Oseon</span>
         <div class="place-meta">
-          <span class="place-time">고기</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1976325076" target="_blank" rel="noopener" aria-label="오선 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Meat</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1976325076" target="_blank" rel="noopener" aria-label="Oseon map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
     </div>
 
     <p class="place-category reveal">
       <svg class="icon" viewBox="0 0 24 24"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
-      카페
+      Cafes
     </p>
     <div class="place-grid reveal-stagger">
       <div class="place-item reveal" style="--i:0">
-        <span class="place-name">베카신</span>
+        <span class="place-name">Becassine</span>
         <div class="place-meta">
-          <span class="place-time">디저트카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/208751122" target="_blank" rel="noopener" aria-label="베카신 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Dessert</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/208751122" target="_blank" rel="noopener" aria-label="Becassine map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:1">
-        <span class="place-name">카페679</span>
+        <span class="place-name">Cafe 679</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/89568104" target="_blank" rel="noopener" aria-label="카페679 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/89568104" target="_blank" rel="noopener" aria-label="Cafe 679 map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:2">
-        <span class="place-name">흘</span>
+        <span class="place-name">Heul</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1878838597" target="_blank" rel="noopener" aria-label="흘 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1878838597" target="_blank" rel="noopener" aria-label="Heul map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:3">
-        <span class="place-name">마실</span>
+        <span class="place-name">Masil</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/220828207" target="_blank" rel="noopener" aria-label="마실 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/220828207" target="_blank" rel="noopener" aria-label="Masil map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:4">
-        <span class="place-name">자드부팡</span>
+        <span class="place-name">Jardin de Pain</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/2144187164" target="_blank" rel="noopener" aria-label="자드부팡 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/2144187164" target="_blank" rel="noopener" aria-label="Jardin de Pain map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:5">
-        <span class="place-name">카페세바</span>
+        <span class="place-name">Cafe Seba</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/17086100" target="_blank" rel="noopener" aria-label="카페세바 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/17086100" target="_blank" rel="noopener" aria-label="Cafe Seba map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:6">
-        <span class="place-name">채식카페 작은부엌</span>
+        <span class="place-name">Jageun Bueok (Vegan)</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/21543202" target="_blank" rel="noopener" aria-label="채식카페 작은부엌 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/21543202" target="_blank" rel="noopener" aria-label="Jageun Bueok map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:7">
-        <span class="place-name">카페 동백</span>
+        <span class="place-name">Cafe Dongbaek</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1208953462" target="_blank" rel="noopener" aria-label="카페 동백 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1208953462" target="_blank" rel="noopener" aria-label="Cafe Dongbaek map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:8">
-        <span class="place-name">단추숲</span>
+        <span class="place-name">Danchu Sup</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1380538907" target="_blank" rel="noopener" aria-label="단추숲 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1380538907" target="_blank" rel="noopener" aria-label="Danchu Sup map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:9">
-        <span class="place-name">안티코</span>
+        <span class="place-name">Antico</span>
         <div class="place-meta">
-          <span class="place-time">커피전문점</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1575459742" target="_blank" rel="noopener" aria-label="안티코 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Coffee</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1575459742" target="_blank" rel="noopener" aria-label="Antico map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:10">
-        <span class="place-name">비케이브</span>
+        <span class="place-name">B-Cave</span>
         <div class="place-meta">
-          <span class="place-time">카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/119385518" target="_blank" rel="noopener" aria-label="비케이브 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Cafe</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/119385518" target="_blank" rel="noopener" aria-label="B-Cave map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:11">
-        <span class="place-name">구좌상회</span>
+        <span class="place-name">Gujwa Sanghoe</span>
         <div class="place-meta">
-          <span class="place-time">디저트카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/26884074" target="_blank" rel="noopener" aria-label="구좌상회 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Dessert</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/26884074" target="_blank" rel="noopener" aria-label="Gujwa Sanghoe map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:12">
-        <span class="place-name">마마미니</span>
+        <span class="place-name">Mama Mini</span>
         <div class="place-meta">
-          <span class="place-time">갤러리카페</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/507163800" target="_blank" rel="noopener" aria-label="마마미니 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Gallery</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/507163800" target="_blank" rel="noopener" aria-label="Mama Mini map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
     </div>
 
     <p class="place-category reveal">
       <svg class="icon" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
-      관광 &middot; 여가
+      Sightseeing &middot; Leisure
     </p>
     <div class="place-grid reveal-stagger">
       <div class="place-item place-item-highlight reveal" style="--i:0">
-        <span class="place-name">동백동산</span>
+        <span class="place-name">Dongbaek-dongsan</span>
         <div class="place-meta">
-          <span class="place-time">바로 앞</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/8335690" target="_blank" rel="noopener" aria-label="동백동산 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Right here</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8335690" target="_blank" rel="noopener" aria-label="Dongbaek-dongsan map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:1">
-        <span class="place-name">올티스</span>
+        <span class="place-name">Oltis</span>
         <div class="place-meta">
-          <span class="place-time">관광명소</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/426667759" target="_blank" rel="noopener" aria-label="올티스 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Attraction</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/426667759" target="_blank" rel="noopener" aria-label="Oltis map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:2">
-        <span class="place-name">귤의 정원 바령</span>
+        <span class="place-name">Tangerine Garden Baryeong</span>
         <div class="place-meta">
-          <span class="place-time">관광농원</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1021330156" target="_blank" rel="noopener" aria-label="귤의 정원 바령 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Farm</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1021330156" target="_blank" rel="noopener" aria-label="Tangerine Garden Baryeong map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:3">
-        <span class="place-name">낙선동 4·3성</span>
+        <span class="place-name">Nakseondong 4.3 Fortress</span>
         <div class="place-meta">
-          <span class="place-time">유적지</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/815714167" target="_blank" rel="noopener" aria-label="낙선동 4·3성 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Historic</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/815714167" target="_blank" rel="noopener" aria-label="Nakseondong 4.3 Fortress map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:4">
-        <span class="place-name">후박나무길</span>
+        <span class="place-name">Hubaknamu-gil</span>
         <div class="place-meta">
-          <span class="place-time">테마거리</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/1788215084" target="_blank" rel="noopener" aria-label="후박나무길 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Trail</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/1788215084" target="_blank" rel="noopener" aria-label="Hubaknamu-gil map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:5">
-        <span class="place-name">선녀와나무꾼 테마공원</span>
+        <span class="place-name">Fairy & Woodcutter Park</span>
         <div class="place-meta">
-          <span class="place-time">테마파크</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/12501734" target="_blank" rel="noopener" aria-label="선녀와나무꾼 테마공원 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Theme Park</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/12501734" target="_blank" rel="noopener" aria-label="Fairy and Woodcutter Theme Park map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:6">
-        <span class="place-name">동백동산습지센터</span>
+        <span class="place-name">Dongbaek Wetland Center</span>
         <div class="place-meta">
-          <span class="place-time">관광명소</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/26874134" target="_blank" rel="noopener" aria-label="동백동산습지센터 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Attraction</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/26874134" target="_blank" rel="noopener" aria-label="Dongbaek Wetland Center map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:7">
-        <span class="place-name">우진제비오름</span>
+        <span class="place-name">Ujinjebi Oreum</span>
         <div class="place-meta">
-          <span class="place-time">오름</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/8460981" target="_blank" rel="noopener" aria-label="우진제비오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Oreum</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8460981" target="_blank" rel="noopener" aria-label="Ujinjebi Oreum map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:8">
-        <span class="place-name">거문오름</span>
+        <span class="place-name">Geomun Oreum</span>
         <div class="place-meta">
-          <span class="place-time">오름</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/18489468" target="_blank" rel="noopener" aria-label="거문오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Oreum</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/18489468" target="_blank" rel="noopener" aria-label="Geomun Oreum map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:9">
-        <span class="place-name">골체오름</span>
+        <span class="place-name">Golche Oreum</span>
         <div class="place-meta">
-          <span class="place-time">오름</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/8188069" target="_blank" rel="noopener" aria-label="골체오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Oreum</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8188069" target="_blank" rel="noopener" aria-label="Golche Oreum map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
       <div class="place-item reveal" style="--i:10">
-        <span class="place-name">알밤오름</span>
+        <span class="place-name">Albam Oreum</span>
         <div class="place-meta">
-          <span class="place-time">오름</span>
-          <a class="place-map-btn" href="https://place.map.kakao.com/8490981" target="_blank" rel="noopener" aria-label="알밤오름 지도"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <span class="place-time">Oreum</span>
+          <a class="place-map-btn" href="https://place.map.kakao.com/8490981" target="_blank" rel="noopener" aria-label="Albam Oreum map"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a>
         </div>
       </div>
     </div>
@@ -1351,14 +1359,14 @@
 <!-- ════════════════ Closing ════════════════ -->
 <section class="closing">
   <div class="container">
-    <h2 class="closing-title reveal">선흘곶 사계</h2>
-    <p class="reveal">에서 편히 묵으시고<br>좋은 추억 많이 만들어 가시길<br>희망합니다 :)</p>
+    <h2 class="closing-title reveal">Seonheulgot Sagye</h2>
+    <p class="reveal">We hope you have a restful stay<br>and take home many wonderful memories :)</p>
   </div>
 </section>
 
 <!-- ════════════════ Footer ════════════════ -->
 <footer>
-  <p>선흘곶 사계 &middot; 제주특별자치도 제주시 조천읍 선흘동1길 58</p>
+  <p>Seonheulgot Sagye &middot; 58 Seonheuldong 1-gil, Jocheon-eup, Jeju-si, Jeju</p>
 </footer>
 
 <!-- ════════════════ Scripts ════════════════ -->
